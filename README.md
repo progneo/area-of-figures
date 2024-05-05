@@ -38,13 +38,3 @@ To run the unit tests, use the following command:
 ```shell
 dotnet test
 ```
-
-# Extra task
-**Products Table:**
-- Columns might include ProductID, ProductName.
-
-**Categories Table:**
-- Columns might include CategoryID, CategoryName.  
-
-**ProductCategories Table:** This is a junction table for the many-to-many relationship.
-- Columns might include ProductID, CategoryID.
