@@ -48,18 +48,3 @@ dotnet test
 
 **ProductCategories Table:** This is a junction table for the many-to-many relationship.
 - Columns might include ProductID, CategoryID.
-
-SQL code to retrieve all _**Product Name - Category Name**_ pairs:
-```sql
-SELECT 
-    p.ProductName,
-    ISNULL(c.CategoryName, 'No Category') AS CategoryName
-FROM 
-    Products p
-LEFT JOIN 
-    ProductCategories pc ON p.ProductID = pc.ProductID
-LEFT JOIN 
-    Categories c ON pc.CategoryID = c.CategoryID
-ORDER BY 
-    p.ProductName, c.CategoryName;
-```
